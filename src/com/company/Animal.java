@@ -1,4 +1,6 @@
 package com.company;
+import org.w3c.dom.ls.LSOutput;
+
 import java.io.File;
 
 public class Animal {
@@ -19,5 +21,30 @@ public class Animal {
             this.weight = DEFAULT_LION_WEIGHT;
         if(species == "mouse")
             this.weight = DEFAULT_MOUSE_WEIGHT;
+    }
+    void feed()
+    {
+       if(weight <= 0)
+       {
+           System.out.println("IT TRUSTED YOU AND YOU KILLED IT");
+       }
+       else
+       {
+            weight++;
+           System.out.println("Thx for food! Now I weight "+weight);
+       }
+
+    }
+    void takeForAWalk()
+    {
+        if(weight <= 0)
+        {
+            System.out.println("911 SOMEONE IS DRAGGING A DEAD ANIMAL ON THE SIDEWALK");
+        }
+        else
+        {
+            weight --;
+            System.out.println("Thanks for taking me for a walk! Now I weight"+weight);
+        }
     }
 }
