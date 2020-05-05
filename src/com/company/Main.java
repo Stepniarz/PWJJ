@@ -23,6 +23,10 @@ public class Main {
 		VolvoS40.plates = "GD33333";
 		VolvoS40.setPrice(8000.0);
 		me.setCar(VolvoS40);
+		Car OpelAstra = new Car("Opel","Astra",1.6,false);
+		OpelAstra.setPrice(8000.0);
+		Car OpelAstra1 = new Car("Opel","Astra",1.6,false);
+		OpelAstra.setPrice(8000.0);
 
 		Phone iPhone = new Phone("Apple","SE",4.4,false);
 	//console
@@ -30,6 +34,8 @@ public class Main {
 		System.out.println(dog);
 		System.out.println(iPhone);
 		System.out.println(me);
+		System.out.println(VolvoS40.getPrice().equals(OpelAstra.getPrice()));
+		System.out.println(OpelAstra1.getPrice().equals(OpelAstra.getPrice()));
 		/*
 		System.out.println("Hello "+me.firstName+", you have so many animals:");
 		System.out.println(dog.name+", "+lion.name+", "+mouse.name);
