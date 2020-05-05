@@ -6,7 +6,7 @@ public class Human {
     String lastName;
     Animal pet;
     Phone phone;
-    Car car;
+    private Car car;
     private Double salary;
 
 
@@ -24,6 +24,26 @@ public class Human {
         else if(salary>10000.0)
             throw new IllegalArgumentException("Dude you are a junior from WSB what did you expect?");
         this.salary = salary;
+    }
+    public Car getCar()
+    {
+        return this.car;
+    }
+    public void setCar(Car car)
+    {
+        if(salary>=car.getPrice())
+        {
+            System.out.println("You managed to buy the car in cash! WOW");
+            this.car = car;
+        }
+        else if(salary>car.getPrice()/12)
+        {
+            System.out.println("You had to take a loan for the car... better than nothing I guess");
+            this.car = car;
+        }
+        else {
+            System.out.println("You can't afford this car. Go to college or something and stop wasting my time");
+        }
     }
 
 

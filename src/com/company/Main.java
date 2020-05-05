@@ -15,16 +15,22 @@ public class Main {
 		me.lastName = "Stępiński";
 		me.pet = dog;
 		me.setSalary(4000.0);
-	//Zad 2
+
 		Car VolvoS40 = new Car ("Volvo","s40",1.6,false);
 		VolvoS40.plates = "GD33333";
-		me.car = VolvoS40;
+		VolvoS40.setPrice(8000.0);
+		me.setCar(VolvoS40);
 	//console
+		System.out.println(me.getCar());
+		/*
 		System.out.println("Hello "+me.firstName+", you have so many animals:");
 		System.out.println(dog.name+", "+lion.name+", "+mouse.name);
 		System.out.println("You need to take care of them. That means you need to walk and feed them");
 		System.out.println(me.car.plates);
 		System.out.println("My salary is: "+me.getSalary());
+		*/
+	//Zad 5
+
     }
 
 }
