@@ -1,5 +1,7 @@
 package com.company;
 
+import java.security.spec.RSAOtherPrimeInfo;
+
 public class Main {
 
     public static void main(String[] args)
@@ -20,8 +22,13 @@ public class Main {
 		VolvoS40.plates = "GD33333";
 		VolvoS40.setPrice(8000.0);
 		me.setCar(VolvoS40);
+
+		Phone iPhone = new Phone("Apple","SE",4.4,false);
 	//console
 		System.out.println(me.getCar());
+		System.out.println(dog);
+		System.out.println(iPhone);
+		System.out.println(me);
 		/*
 		System.out.println("Hello "+me.firstName+", you have so many animals:");
 		System.out.println(dog.name+", "+lion.name+", "+mouse.name);

@@ -47,4 +47,12 @@ public class Animal {
             System.out.println("Thanks for taking me for a walk! Now I weight"+weight);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Animal's" +
+                " species: " + species +
+                ", name: " + name +
+                ", weight: " + weight;
+    }
 }

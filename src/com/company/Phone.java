@@ -13,4 +13,13 @@ public class Phone {
         this.screenSize = screenSize;
         this.isAndroid = isAndroid;
     }
+
+    @Override
+    public String toString() {
+        return "Phone" +
+                " produced by:'" + producer +
+                ", model:'" + model +
+                ", screenSize:" + screenSize +
+                ", isAndroid:" + isAndroid;
+    }
 }

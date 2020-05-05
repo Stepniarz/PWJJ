@@ -46,8 +46,17 @@ public class Human {
         }
     }
 
-
-   /*{ public Human(String species)
+    @Override
+    public String toString() {
+        return "Human" +
+                " firstName: " + firstName +
+                ", lastName: " + lastName +
+                ", pet: " + pet +
+                ", phone: " + phone +
+                ", car: " + car +
+                ", salary: " + salary;
+    }
+    /*{ public Human(String species)
 
         this.species = species;
         if(species == "Matt")
