@@ -1,6 +1,9 @@
 package com.company.devices;
 
-public class Phone extends Device {
+import com.company.Human;
+import com.company.Salleable;
+
+public class Phone extends Device implements Salleable {
     public final String producer;
     public final String model;
     public final Double screenSize;
@@ -44,5 +47,22 @@ public class Phone extends Device {
     @Override
     public void turnOn() {
         System.out.println("BEEP BEEP, READY TO USE CHIEF");
+    }
+
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if(seller.phone == this && buyer.cash >= price)
+        {
+            seller.cash += price;
+            seller.phone = null;
+            buyer.cash -= price;
+            buyer.phone = this;
+            System.out.println(seller + " Just sold his phone to " + buyer + " for just "+ price);
+        }
+        else
+        {
+            System.out.println("Someone one here is lying about their savings or possessing a certain phone");
+        }
     }
 }

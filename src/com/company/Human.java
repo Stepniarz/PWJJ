@@ -4,12 +4,13 @@ import com.company.devices.Car;
 import com.company.devices.Phone;
 
 public class Human {
+    public double cash;
     String species;
     String firstName;
     String lastName;
     Animal pet;
-    Phone phone;
-    private Car car;
+    public Phone phone;
+    public Car car;
     private Double salary;
 
 
@@ -59,9 +60,11 @@ public class Human {
                 ", car: " + car +
                 ", salary: " + salary;
     }
+
     /*{ public Human(String species)
 
         this.species = species;
         if(species == "Matt")
     }*/
+
 }

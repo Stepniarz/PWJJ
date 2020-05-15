@@ -5,7 +5,8 @@ import com.company.devices.Phone;
 
 public class Main {
 
-    public static void main(String[] args)
+
+	public static void main(String[] args)
     {
 		Animal dog = new Animal("dog");
 		dog.name = "Diego";
@@ -18,6 +19,15 @@ public class Main {
 		me.lastName = "Stępiński";
 		me.pet = dog;
 		me.setSalary(4000.0);
+		me.cash = 15000.0;
+
+
+		Human Gruby = new Human();
+		Gruby.firstName = "Gruby";
+		Gruby.lastName = "Kolega";
+		Gruby.pet = lion;
+		Gruby.setSalary(3000.0);
+		Gruby.cash = 12000.0;
 
 		Car VolvoS40 = new Car ("Volvo","s40",1.6,false,2015);
 		VolvoS40.plates = "GD33333";
@@ -27,11 +37,16 @@ public class Main {
 		OpelAstra.setPrice(8000.0);
 		Car OpelAstra1 = new Car("Opel","Astra",1.6,false,2015);
 		OpelAstra.setPrice(8000.0);
-
 		Phone iPhone = new Phone("Apple","SE",4.4,false,2015);
+
+
 	//console
 		iPhone.turnOn();
 		VolvoS40.turnOn();
+		VolvoS40.sell(me, Gruby,6000.0);
+		lion.sell(Gruby, me, 2000.0);
+		iPhone.sell(me, Gruby, 1000.0);
+
 		/*
 		System.out.println(me.getCar());
 		System.out.println(dog);

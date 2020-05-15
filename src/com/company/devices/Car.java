@@ -1,6 +1,9 @@
 package com.company.devices;
 
-public class Car extends Device{
+import com.company.Human;
+import com.company.Salleable;
+
+public class Car extends Device implements Salleable {
     public final String producer;
     public final String model;
     public final Double engine;
@@ -56,6 +59,25 @@ public class Car extends Device{
     @Override
     public void turnOn() {
         System.out.println("BRRRR, WHERE ARE WE GOING CHIEF?");
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+    if (seller.car == this && buyer.cash >= price)
+    {
+        seller.cash += price;
+        seller.car = null;
+        buyer.cash -= price;
+        buyer.car = this;
+        System.out.println(seller + "Just sold his car to " + buyer + "for just " + price + "!!!");
+    }
+    else
+    {
+        System.out.println("Someone here doesn't have money to buy what he/she deserves");
+        System.out.println("OR");
+        System.out.println("Someone doesn't posses the item he/she wishes to sell");
+    }
+
     }
 }
   
