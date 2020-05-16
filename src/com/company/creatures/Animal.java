@@ -1,17 +1,17 @@
-package com.company;
-import org.w3c.dom.ls.LSOutput;
+package com.company.creatures;
+import com.company.Human;
 
-import javax.swing.*;
 import java.io.File;
 
-public class Animal implements Salleable{
+public abstract class Animal implements Salleable, Feedable {
     final String species;
-    String name;
+    public String name;
     private Double weight = 10.0;
     File pic;
     static final public Double DEFAULT_DOG_WEIGHT = 10.0;
     static final public Double DEFAULT_LION_WEIGHT = 190.0;
     static final public Double DEFAULT_MOUSE_WEIGHT = 0.05;
+    static final public Double DEFAULT_FOOD_WEIGHT = 1.0;
 
     public Animal(String species) {
         this.species = species;
@@ -23,15 +23,6 @@ public class Animal implements Salleable{
             this.weight = DEFAULT_MOUSE_WEIGHT;
     }
 
-    void feed() {
-        if (weight <= 0) {
-            System.out.println("IT TRUSTED YOU AND YOU KILLED IT");
-        } else {
-            weight++;
-            System.out.println("Thx for food! Now I weight " + weight);
-        }
-
-    }
 
     void takeForAWalk() {
         if (weight <= 0) {
@@ -65,6 +56,19 @@ public class Animal implements Salleable{
             {
                 System.out.println("Someone one here is lying about their savings or possessing a certain pet");
             }
+
+    }
+
+    @Override
+    public void feed() {
+        feed(DEFAULT_FOOD_WEIGHT);
+
+    }
+
+    @Override
+    public void feed(Double foodWeight) {
+        weight += foodWeight;
+        System.out.println("OM NOM NOM...NOM");
 
     }
 }
