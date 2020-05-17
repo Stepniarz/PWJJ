@@ -3,12 +3,18 @@ package com.company.devices;
 import com.company.Human;
 import com.company.creatures.Salleable;
 
-public class Phone extends Device implements Salleable {
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class Phone extends Device implements Salleable{
     public final String producer;
     public final String model;
     public final Double screenSize;
     public final boolean isAndroid;
     public final Integer yearOfProduction;
+    public static final double appVersion = 1.0;
+    public static final String serverIP = "208.66.221.221";
+    public static final String appUrl = "www.gottacatchthemall.com";
 
     public Phone(String producer, String model, Double screenSize, boolean isAndroid, Integer yearOfProduction)
     {
@@ -64,5 +70,23 @@ public class Phone extends Device implements Salleable {
         {
             System.out.println("Someone one here is lying about their savings or possessing a certain phone");
         }
+    }
+
+    public void installAnApp(String appName) {
+        System.out.println(appName + " has been successfully installed!");
+    }
+
+    public void installAnApp(String appName, double AppVersion)  {
+        System.out.println(appVersion + " version of the " + appName + " has been successfully installed!");
+    }
+
+    public void installAnApp(String appName, String url, double AppVersion) {
+        System.out.println(appVersion + " version of the " + appName + "downloaded from" + appUrl
+                +" has been successfully installed!");
+    }
+
+    public void installAnApp(String appName, double AppVersion, String url) {
+        System.out.println(AppVersion + " version of the " + appName
+                +" has been successfully downloaded from " + appUrl);
     }
 }
