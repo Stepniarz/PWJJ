@@ -5,8 +5,8 @@ public class Diesel extends Car {
         super(producer, model, engine, isElectric, yearOfProduction);
     }
 
-    @Override
+   /* @Override
     void Refuel() {
         System.out.println("Refuel complete");
-    }
+    }*/
 }

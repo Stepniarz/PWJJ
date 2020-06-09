@@ -5,8 +5,8 @@ public class LPG extends Car{
         super(producer, model, engine, isElectric, yearOfProduction);
     }
 
-    @Override
+  /*  @Override
     void Refuel() {
         System.out.println("Refueled for the price of a chocolate bar");
-    }
+    }*/
 }

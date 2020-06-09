@@ -5,8 +5,8 @@ public class Electric extends Car{
         super(producer, model, engine, isElectric, yearOfProduction);
     }
 
-    @Override
+  /*  @Override
     void Refuel() {
         System.out.println("Refueled with an USB cable");
-    }
+    }*/
 }
